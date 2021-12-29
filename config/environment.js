@@ -16,7 +16,19 @@ module.exports = function (environment) {
         Date: false,
       },
     },
-
+    // firebase: {
+    //   apiKey: "AIzaSyCOAs709NKtjkystOYtbNxSFlPMAcPNZk4",
+    //   authDomain: "food-delivery-app-d6445.firebaseapp.com",
+    //   databaseURL: "https://food-delivery-app-d6445-default-rtdb.firebaseio.com",
+    //   projectId: "food-delivery-app-d6445",
+    //   storageBucket: "food-delivery-app-d6445.appspot.com",
+    //   messagingSenderId: "108947778395",
+    //   appId: "1:108947778395:web:fca4d39bc433b2d48d487e",
+    //   measurementId: "G-ZEB0QF267M"
+    // },
+    // fontawesome: {
+    //   defaultPrefix: 'fab', // light icons
+    // },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

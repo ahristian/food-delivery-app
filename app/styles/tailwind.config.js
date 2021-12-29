@@ -1,0 +1,83 @@
+module.exports = {
+  purge: {
+    enabled: true,
+    content: [
+      './app/**/*.hbs',
+      './app/**/*.html',
+      './app/**/*.ts',
+      './app/**/*.js',
+    ],
+  },
+  theme: {
+    extend: {
+      padding: ['hover'],
+      backgroundPosition: {
+        'right-2': 'right 0.5rem center',
+        'right-4': 'right 1rem center',
+      },
+      fontSize: {
+        '2xl': '1.5rem',
+        '3xl': '1.875rem',
+        '4xl': '2.25rem',
+        '5xl': '3rem',
+        '6xl': '4rem',
+        '7xl': '5rem',
+      },
+      cursor: {
+        auto: 'auto',
+        default: 'default',
+        pointer: 'pointer',
+        wait: 'wait',
+        text: 'text',
+      },
+      fontFamily: {
+        sans: [
+          '"Fira Sans"',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
+        serif: [
+          'ui-serif',
+          'Georgia',
+          'Cambria',
+          '"Times New Roman"',
+          'Times',
+          'serif',
+        ],
+        mono: [
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          '"Liberation Mono"',
+          '"Courier New"',
+          'monospace',
+        ],
+      },
+    },
+    variants: {
+      backgroundColor: ['responsive', 'hover', 'focus'],
+      display: ['responsive', 'hover', 'focus'],
+      maxHeight: ['focus'],
+      textColor: ['responsive', 'hover', 'focus', 'group-focus'],
+      borderColor: ['responsive', 'hover', 'focus', 'focus-within'],
+    },
+    plugins: [
+      require('tailwindcss/defaultConfig'),
+      require('tailwindcss/defaultTheme'),
+    ],
+  },
+};
