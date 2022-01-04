@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noEmitOnError": false,
+    "noEmit": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "baseUrl": ".",
+    "module": "es6",
+    "experimentalDecorators": true,
+    "paths": {
+      "food-delivery-app/tests/*": [
+        "tests/*"
+      ],
+      "food-delivery-app/mirage/*": [
+        "mirage/*"
+      ],
+      "food-delivery-app/*": [
+        "app/*"
+      ],
+      "*": [
+        "types/*"
+      ]
+    }
+  },
+  "exclude": [
+    ".git",
+    "bower_components",
+    "dist",
+    "tmp"
+  ],
+  "include": [
+    "app/**/*",
+    "tests/**/*",
+    "types/**/*",
+    "mirage/**/*"
+  ]
+}
