@@ -1,0 +1,12 @@
+{{page-title "Index"}}
+meals
+<ul class="item-list">
+  {{#each @model as |meal|}}
+    <li>
+      <LinkTo @route="meals.show" @model={{meal.id}}>
+        {{meal.name}}
+      </LinkTo>
+    </li>
+  {{/each}}
+
+</ul>

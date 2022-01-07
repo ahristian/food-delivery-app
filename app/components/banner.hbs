@@ -1,27 +1,29 @@
-<div
-  class="text-center text-xl sm:text-2xl md:text-4xl font-extralight transition duration-150 flex flex-col pt-10 md:grid md:grid-row-12 gap-6 md:content-center md:p-6 mx-auto h-full overflow-y-scroll scrollbar-w-1.5 scrollbar-track-gray-100 scrollbar-thumb-rounded scrollbar-thumb-gray-300 shadow-lg bg-fixed bg-bottom bg-cover bg-no-repeat"
-  style="background-image: linear-gradient(rgba(0, 0, 0, 0.47),rgba(0, 0, 0, 0)), url(/images/img2.jpeg); height:60vh;"
+<header
+  class="flex items-center justify-center text-xl sm:text-2xl md:text-4xl font-extralight h-screen mb-12 bg-fixed bg-center bg-cover gap-6"
+  style="background-image: linear-gradient(rgba(0, 0, 0, 0.47),rgba(0, 0, 0, 0)), url(https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80); height:60vh;"
 >
-  <div class="text-white uppercase my-2 gap-4 w-full flex flex-col row-span-6">
-    <div>
+  <div
+    class="p-7 text-white flex flex-col row-span-6 bg-gray-400 bg-opacity-50 rounded-xl text-center"
+  >
+    <div class="mb-4">
       Order your favorite food
     </div>
-    <div>
+    <div class="mb-4">
       Choose Pegas Food
     </div>
+    <div class="flex justify-center text-2xl items-center mt-3 gap-4 row-span-2">
+      <button
+        class="bg-green-600 hover:bg-white hover:text-black px-5 py-2.5 text-sm tracking-wide rounded-md font-semibold text-white"
+        href="#"
+      >
+        Menu
+      </button>
+      <button
+        class="bg-white hover:text-white hover:bg-green-600 px-5 py-2.5 text-sm tracking-wide rounded-md font-semibold text-black"
+        href="#"
+      >
+        Place an order
+      </button>
+    </div>
   </div>
-  <div class="flex justify-center items-center gap-4 row-span-2">
-    <button
-      class="bg-green-600 hover:bg-green-900 px-5 py-2.5 text-sm leading-5 rounded-md font-light text-white"
-      href="#"
-    >
-      Menu
-    </button>
-    <button
-      class="bg-green-600 hover:bg-green-900 px-5 py-2.5 text-sm leading-5 rounded-md font-light text-white"
-      href="#"
-    >
-      Place an order
-    </button>
-  </div>
-</div>
+</header>
