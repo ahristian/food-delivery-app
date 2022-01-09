@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2020",
+    "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
@@ -19,31 +20,5 @@
     "baseUrl": ".",
     "module": "es6",
     "experimentalDecorators": true,
-    "paths": {
-      "food-delivery-app/tests/*": [
-        "tests/*"
-      ],
-      "food-delivery-app/mirage/*": [
-        "mirage/*"
-      ],
-      "food-delivery-app/*": [
-        "app/*"
-      ],
-      "*": [
-        "types/*"
-      ]
-    }
   },
-  "exclude": [
-    ".git",
-    "bower_components",
-    "dist",
-    "tmp"
-  ],
-  "include": [
-    "app/**/*",
-    "tests/**/*",
-    "types/**/*",
-    "mirage/**/*"
-  ]
 }

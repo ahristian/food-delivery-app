@@ -25,12 +25,12 @@
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.2.0",
+    "@glimmer/component": "^1.0.3",
+    "@glimmer/tracking": "^1.0.3",
     "@fortawesome/ember-fontawesome": "^0.2.3",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@glimmer/component": "^1.0.3",
-    "@glimmer/tracking": "^1.0.3",
     "autoprefixer": "^10.4.0",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
@@ -73,8 +73,9 @@
     "postcss": "^8.4.5",
     "prettier": "^2.2.1",
     "qunit": "^2.14.0",
-    "qunit-dom": "^1.6.0",
-    "tailwindcss": "^3.0.8"
+    "tailwindcss": "^3.0.8",
+    "qunit-dom": "^1.6.0"
+
   },
   "engines": {
     "node": "10.* || >= 12"

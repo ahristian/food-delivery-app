@@ -1,0 +1,198 @@
+{{page-title "Index"}}
+{{log @model}}
+<ul class="item-list">
+  {{#each @model as |recipe|}}
+    <li>
+      <LinkTo @route="recipes.show" @model={{recipe.id}}>
+        {{recipe.name}}
+      </LinkTo>
+    </li>
+  {{/each}}
+{{!--
+  <li>
+    <button type="button" {{on "click" this.createRecipe}}>
+      + New Recipe
+    </button>
+  </li> --}}
+</ul>
+
+<div class="cars">
+  <div class="container-fluid other-pages-background">
+    <div class="row">
+      <div class="col-md text-center mt-5">
+        <h2>Cars Sale In Albuquerque</h2>
+      </div>
+    </div>
+  </div>
+  {{#each @model as |vehicle|}}
+    {{!-- {{#if vehicle.isNew}}
+      <section>
+        <div class="col-lg text-center mt-4">
+          <h2>Sell My Car</h2>
+        </div>
+        <form class="contact-form container">
+          <div class="row pt-4">
+            <div class="col-lg">
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Car Brand:</span>
+                </div>
+                {{input type="text" value=brand class="form-control"}}
+                {{#if (v-get vehicle 'brand' 'isInvalid')}}
+                  <div class="text-danger">
+                    {{v-get vehicle 'brand' 'message'}}
+                  </div>
+                {{/if}}
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Car Model:</span>
+                </div>
+                {{input type="text" value=vehicle.model class="form-control"}}
+                {{#if (v-get vehicle 'model' 'isInvalid')}}
+                  <div class="text-danger">
+                    {{v-get vehicle 'model' 'message'}}
+                  </div>
+                {{/if}}
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Car Year:</span>
+                </div>
+                {{input type="number" value=vehicle.year class="form-control"}}
+                {{#if (v-get vehicle 'year' 'isInvalid')}}
+                  <div class="text-danger">
+                    {{v-get vehicle 'year' 'message'}}
+                  </div>
+                {{/if}}
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Car Mileage (miles):</span>
+                </div>
+                {{input type="number" value=vehicle.mileage class="form-control"}}
+                {{#if (v-get vehicle 'number' 'isInvalid')}}
+                  <div class="text-danger">
+                    {{v-get vehicle 'number' 'message'}}
+                  </div>
+                {{/if}}
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Car Color:</span>
+                </div>
+                {{input type="text" value=vehicle.color class="form-control"}}
+                {{#if (v-get vehicle 'color' 'isInvalid')}}
+                  <div class="text-danger">
+                    {{v-get vehicle 'color' 'message'}}
+                  </div>
+                {{/if}}
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Car Image link:</span>
+                </div>
+                {{input type="link" value=vehicle.image class="form-control"}}
+                {{#if (v-get vehicle 'image' 'isInvalid')}}
+                  <div class="text-danger">
+                    {{v-get vehicle 'image' 'message'}}
+                  </div>
+                {{/if}}
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Car Price: $</span>
+                </div>
+                {{input type="number" value=vehicle.price class="form-control"}}
+                {{#if (v-get vehicle 'price' 'isInvalid')}}
+                  <div class="text-danger">
+                    {{v-get vehicle 'price' 'message'}}
+                  </div>
+                {{/if}}
+              </div>
+            </div>
+
+            <div class="col-lg">
+              <div class="mt-4">
+                <span class="input-group-text">Car Description:</span>
+                {{textarea type="text" value=vehicle.description class="form-control" rows="6"}}
+                {{#if (v-get vehicle 'description' 'isInvalid')}}
+                  <div class="text-danger">
+                    {{v-get vehicle 'description' 'message'}}
+                  </div>
+                {{/if}}
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Your Name: </span>
+                </div>
+                {{input type="text" value=vehicle.name class="form-control"}}
+                {{#if (v-get vehicle 'name' 'isInvalid')}}
+                  <div class="text-danger">
+                    {{v-get vehicle 'name' 'message'}}
+                  </div>
+                {{/if}}
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Your Email:</span>
+                </div>
+                {{input type="email" value=vehicle.email class="form-control"}}
+                {{#if (v-get vehicle 'email' 'isInvalid')}}
+                  <div class="text-danger">
+                    {{v-get vehicle 'email' 'message'}}
+                  </div>
+                {{/if}}
+              </div>
+
+              <div class="input-group mt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Your Phone:</span>
+                </div>
+                {{input type="number" value=vehicle.phone class="form-control"}}
+                {{#if (v-get vehicle 'phone' 'isInvalid')}}
+                  <div class="text-danger">
+                    {{v-get vehicle 'phone' 'message'}}
+                  </div>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+          <div class="buttonFix align-self-end">
+            <button {{action 'saveCarItem' vehicle}} class="btn btn-dark mt-5" type="Submit">Save</button>
+          </div>
+        </form>
+      </section>
+
+    {{else}} --}}
+      <div class="container">
+        <div class="car-items">
+          <ul class="results">
+            <li>
+              <Vehicle @vehicle={{vehicle}} />
+            </li>
+            <div class="row my-2">
+              <div class="col-md-2  text-right">
+                {{!-- <button {{action 'deleteCarItem' vehicle}} type="button" class="btn btn-danger">Delete</button> --}}
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    {{!-- {{/if}} --}}
+  {{/each}}
+  {{!-- <div class="row my-2 ">
+    <div class="col-md-6  text-right">
+      <button {{action 'addCar'}} type="button" class="btn btn-info py-4 px-4 ">Adding a car</button>
+
+    </div>
+  </div> --}}
+</div>
