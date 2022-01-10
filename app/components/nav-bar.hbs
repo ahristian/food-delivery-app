@@ -1,5 +1,5 @@
 <nav
-  class="bg-white nav shadow dark:bg-gray-800"
+  class="bg-white nav dark:bg-gray-800 shadow border-b border-gray-200"
   {{on-click-outside (action 'someAction')}}
 >
   <div
@@ -17,8 +17,7 @@
             text-gray-800
             dark:text-white capitalize
             md:text-2xl
-            hover:text-gray-700
-            font-semibold
+            hover:text-gray-700 inline-block bg-transparent rounded  outline-none focus:ring-0
             dark:hover:text-gray-300"
         >
           Food Delivery
@@ -31,8 +30,8 @@
           class="text-gray-500
             dark:text-gray-200
             hover:text-gray-600
-            dark:hover:text-gray-400
-            focus:outline-none focus:text-gray-600
+            dark:hover:text-gray-400 inline-block bg-transparent rounded  outline-none focus:ring-0
+            focus:text-gray-600
             dark:focus:text-gray-400"
           {{on 'click' this.toggle}}
         >
@@ -55,8 +54,8 @@
             font-semibold
             dark:text-gray-200
             hover:text-green-600
-            dark:hover:text-green-600
-           outline-none  md:mx-4 md:my-0"
+            dark:hover:text-green-600 inline-block bg-transparent rounded active:text-green-600 outline-none focus:ring-0
+           md:mx-4 md:my-0"
             @route="meals"
           >
             Food Menu
@@ -67,8 +66,8 @@
             font-semibold
             dark:text-gray-200
             hover:text-green-600
-            dark:hover:text-green-600
-           outline-none  md:mx-4 md:my-0"
+            dark:hover:text-green-600 inline-block bg-transparent rounded active:text-green-600 outline-none focus:ring-0
+           md:mx-4 md:my-0"
             {{! @route="services.index" }}
           >
             How we work
@@ -79,8 +78,8 @@
             font-semibold
             dark:text-gray-200
             hover:text-green-600
-            dark:hover:text-green-600
-           outline-none  md:mx-4 md:my-0"
+            dark:hover:text-green-600 inline-block bg-transparent rounded active:text-green-600 outline-none focus:ring-0
+            md:mx-4 md:my-0"
             {{! @route="services.index" }}
           >
             Sign Up/ Log In
@@ -94,22 +93,22 @@
           class="my-1
             text-gray-700
             font-semibold
-            dark:text-gray-200
+            dark:text-gray-200 inline-block bg-transparent rounded active:text-green-600 outline-none focus:ring-0
             hover:text-green-600
             dark:hover:text-green-600
-           outline-none  md:mx-4 md:my-0"
-            @route="meals"
-          >
-            Food Menu
-          </LinkTo>
+            md:mx-4 md:my-0"
+          @route="meals"
+        >
+          Food Menu
+        </LinkTo>
         <a
           class="my-1
             text-gray-700
             font-semibold
-            dark:text-gray-200
+            dark:text-gray-200 inline-block bg-transparent rounded active:text-green-600 outline-none focus:ring-0
             hover:text-green-600
             dark:hover:text-green-600
-           outline-none  md:mx-4 md:my-0"
+            md:mx-4 md:my-0"
           {{! @route="services.index" }}
         >
           How we work
@@ -118,10 +117,10 @@
           class="my-1
             text-gray-700
             font-semibold
-            dark:text-gray-200
+            dark:text-gray-200 inline-block bg-transparent rounded active:text-green-600 outline-none focus:ring-0
             hover:text-green-600
             dark:hover:text-green-600
-           outline-none  md:mx-4 md:my-0"
+           md:mx-4 md:my-0"
           {{! @route="services.index" }}
         >
           Sign Up/ Log In

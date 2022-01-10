@@ -1,7 +1,7 @@
 interface Meal {
   name: string;
   description: string;
-  meals: string;
+  menu: Array;
   price: number;
 }
 

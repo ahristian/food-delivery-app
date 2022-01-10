@@ -11,13 +11,16 @@
     <div class="mb-4">
       Choose Pegas Food
     </div>
-    <div class="flex justify-center text-2xl items-center mt-3 gap-4 row-span-2">
-      <button
+    <div
+      class="flex justify-center text-2xl items-center mt-3 gap-4 row-span-2"
+    >
+      <LinkTo
         class="bg-green-600 hover:bg-white hover:text-black px-5 py-2.5 text-sm tracking-wide rounded-md font-semibold text-white"
         href="#"
+        @route="meals"
       >
         Menu
-      </button>
+      </LinkTo>
       <button
         class="bg-white hover:text-white hover:bg-green-600 px-5 py-2.5 text-sm tracking-wide rounded-md font-semibold text-black"
         href="#"

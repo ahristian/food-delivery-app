@@ -1,0 +1,19 @@
+{{page-title 'Meal Single Page'}}
+<div class="">
+  <div class="">
+    {{@model.name}}
+  </div>
+  <div class="">
+    {{@model.description}}
+  </div>
+  <div class="">
+    {{@model.price}}
+  </div>
+  <div class="">
+    <li>
+      {{#each @model.menu as |item|}}
+        {{item}}
+      {{/each}}
+    </li>
+  </div>
+</div>

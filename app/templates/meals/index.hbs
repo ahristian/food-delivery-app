@@ -1,12 +1,7 @@
-{{page-title "Index"}}
-meals
-<ul class="item-list">
-  {{#each @model as |meal|}}
-    <li>
-      <LinkTo @route="meals.show" @model={{meal.id}}>
-        {{meal.name}}
-      </LinkTo>
-    </li>
-  {{/each}}
-
-</ul>
+{{page-title 'Meals'}}
+<div class="w-full my-3 lg:mb-6 text-2xl flex items-center justify-center text-center">
+  <div class="text-3xl md:text-5xl lg:text-6xl text-black font-extralight">
+    Choose Your Next Meal
+  </div>
+</div>
+<Meals @meals={{@model}} />
