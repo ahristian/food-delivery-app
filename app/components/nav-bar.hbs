@@ -1,11 +1,11 @@
 <nav
-  class="bg-white nav dark:bg-gray-800 shadow border-b border-gray-200"
+  class="bg-white nav dark:bg-gray-800 shadow border-b border-gray-200 "
   {{on-click-outside (action 'someAction')}}
 >
   <div
-    class="px-6
+    class="
       py-3
-      mx-auto
+       container
       md:flex md:justify-between md:items-center"
   >
     <div class="flex items-center justify-between">
@@ -46,7 +46,7 @@
     </div>
     <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
     {{#if this.isShow}}
-      <div class="items-center">
+      <div class="items-center ">
         <div class="flex flex-col mt-3 md:mt-0 md:mx-6">
           <LinkTo
             class="my-1
