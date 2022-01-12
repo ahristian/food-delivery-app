@@ -3,6 +3,7 @@ interface Meal {
   description: Array;
   menu: Array;
   price: number;
+  image: string;
 }
 
 export default Meal;

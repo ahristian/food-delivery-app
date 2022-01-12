@@ -5,6 +5,7 @@ module.exports = function() {
       'history',
       'seedling',
       'shopping-bag',
+      'shopping-cart',
     ]
   }
 };

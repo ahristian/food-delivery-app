@@ -10,5 +10,5 @@ Router.map(function () {
   this.route('meals', function () {
     this.route('meal', { path: '/:meal_id' });
   });
-
+  this.route('checkout', function (){});
 });
